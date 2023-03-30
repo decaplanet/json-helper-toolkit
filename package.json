@@ -1,0 +1,30 @@
+{
+  "name": "json-helper-tools",
+  "version": "1.0.0",
+  "description": "A simple pacakge that helps you read and write JSON files.",
+  "main": "./dist/index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev:watch": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decablock/json-helper-tools.git"
+  },
+  "keywords": [
+    "json",
+    "read",
+    "write"
+  ],
+  "author": "decablock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/decablock/json-helper-tools/issues"
+  },
+  "homepage": "https://github.com/decablock/json-helper-tools#readme",
+  "devDependencies": {
+    "@types/node": "^18.15.1",
+    "typescript": "^4.9.5"
+  }
+}

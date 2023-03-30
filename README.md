@@ -1,4 +1,4 @@
-# json-helper-tools
+# json-helper-toolkit
 A simple pacakge that helps you read and write JSON files.
 
 ## Examples
@@ -10,7 +10,7 @@ A simple pacakge that helps you read and write JSON files.
 ```
 *src/index.js*
 ```js
-import { modifyJson, readJson } from "json-helper-tools";
+import { modifyJson, readJson } from "json-helper-toolkit";
 
 // Path should be based on the current work directory.
 // You can check the directory with "process.cwd()".

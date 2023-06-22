@@ -1,6 +1,6 @@
 {
   "name": "json-helper-toolkit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple pacakge that helps you read and write JSON files.",
   "main": "./dist/index.js",
   "types": "index.d.ts",

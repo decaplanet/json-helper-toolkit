@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/decaplanet/json-helper-toolkit#readme",
   "devDependencies": {
-    "@types/node": "^18.15.1",
+    "@types/node": "^20.3.2",
     "typescript": "^5.1.3"
   }
 }

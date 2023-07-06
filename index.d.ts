@@ -4,6 +4,7 @@ declare module "json-helper-toolkit" {
 		inputPath: string
 	) => [path: string, data: T | null];
 	const checkJsonExists: (pathInput: string) => {
+		path: string;
 		isExists: boolean;
 		isValidJson: boolean;
 	};

@@ -1,14 +1,15 @@
 import fs from "node:fs";
 import path from "path";
 
-type CheckJsonExistsFunction = (pathInput: string) => {
+type CheckJsonExistsFunction = (inputPath: string) => {
+	path: string;
 	isExists: boolean;
 	isValidJson: boolean;
 };
 
-const checkJsonExists: CheckJsonExistsFunction = (pathInput: string) => {
+const checkJsonExists: CheckJsonExistsFunction = (inputPath) => {
 	const callerPath = process.cwd();
-	const outputPath = path.resolve(callerPath, pathInput);
+	const outputPath = path.resolve(callerPath, inputPath);
 
 	const isExists = Boolean(fs.existsSync(outputPath));
 	let isValidJson: boolean;
@@ -19,7 +20,7 @@ const checkJsonExists: CheckJsonExistsFunction = (pathInput: string) => {
 		isValidJson = false;
 	}
 
-	return { isExists, isValidJson };
+	return { path: outputPath, isExists, isValidJson };
 };
 
 export default checkJsonExists;

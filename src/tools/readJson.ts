@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "path";
 
-export type ReadJsonFunction = <T = any>(
+type ReadJsonFunction = <T = any>(
 	inputPath: string
 ) => [path: string, data: T | null];
 

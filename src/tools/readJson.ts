@@ -5,14 +5,15 @@ type ReadJsonFunction = <T = any>(
 	inputPath: string
 ) => [path: string, data: T | null];
 
-const readJson: ReadJsonFunction = (pathInput) => {
+const readJson: ReadJsonFunction = <T = any>(inputPath: string) => {
 	const callerPath = process.cwd();
-	const outputPath = path.resolve(callerPath, pathInput);
-	const outputData = JSON.parse(fs.readFileSync(outputPath, "utf8"));
+	const outputPath = path.resolve(callerPath, inputPath);
 
-	if (outputData) {
+	let outputData: T;
+	try {
+		outputData = JSON.parse(fs.readFileSync(outputPath, "utf8"));
 		return [outputPath, outputData];
-	} else {
+	} catch (e: any) {
 		return [outputPath, null];
 	}
 };

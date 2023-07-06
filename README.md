@@ -24,18 +24,23 @@ modifyJson("src/test.json", { name: "changed-name", changed: true });
 
 const [modifiedPath, modifiedData] = readJson("src/test.json");
 
-// Console : changed-name
-console.log(modifiedData.name);
+if (modifiedData) {
+	// Console : changed-name
+	console.log(modifiedData.name);
 
-// Console : true
-console.log(modifiedData.changed);
+	// Console : true
+	console.log(modifiedData.changed);
+}
+
 ```
 
 ### `checkJsonExists`
 ```js
 import { checkJsonExists } from "json-helper-toolkit";
 
-const [isExists, isValidJson] = checkJsonExists("src/test.json");
+const {path, isExists, isValidJson} = checkJsonExists("src/test.json");
+
+console.log(path);
 
 if (isExists && isValidJson) {
 	console.log("The provided Json file exists and it's valid!");

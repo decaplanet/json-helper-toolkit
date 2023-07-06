@@ -1,7 +1,8 @@
 # json-helper-toolkit
-A simple pacakge that helps you read and write JSON files.
+A simple package that helps you read and write JSON files.
 
 ## Examples
+### `modifyJson`, `readJson`
 *src/test.json*
 ```json
 {
@@ -28,4 +29,20 @@ console.log(modifiedData.name);
 
 // Console : true
 console.log(modifiedData.changed);
+```
+
+### `checkJsonExists`
+```js
+import { checkJsonExists } from "json-helper-toolkit";
+
+const [isExists, isValidJson] = checkJsonExists("src/test.json");
+
+if (isExists && isValidJson) {
+	console.log("The provided Json file exists and it's valid!");
+} else if (isValidJson) {
+	console.log(
+		"The directory exists, but the provided file is not a valid Json file."
+	);
+}
+
 ```

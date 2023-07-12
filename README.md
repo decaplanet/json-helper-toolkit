@@ -44,7 +44,7 @@ console.log(path);
 
 if (isExists && isValidJson) {
 	console.log("The provided Json file exists and it's valid!");
-} else if (isValidJson) {
+} else if (!isValidJson) {
 	console.log(
 		"The directory exists, but the provided file is not a valid Json file."
 	);
